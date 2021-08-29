@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- for link preview -->
+    <meta property="og:title" content="Fantasy Football Draft Helper" />
+    <meta property="og:description" content="AI-assisted draft recommendations" />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">      
+
+    <!-- Custom styles for this template -->
+    <link href="views/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+  	<div class='heading'> <h1> Fantasy Football Draft Helper</h1> </div>
+  	<div class='big-grid'>
+  		<div class='team-rosters'> 
+  			<div class='current-pick-roster'>
+	  			<div class='roster-title' id='roster-title'> Team Roster </div>
+					<table id="roster" class="table-layout">
+					    <thead>
+					    	<th>Position</th>
+					        <th>Name</th>
+					        <th>Projection (pts)</th>
+					    </thead>
+					    <tbody id='roster-data'>
+					    </tbody>
+					</table>  
+			</div>	
+			<div class='my-roster'>
+				<div class='roster-title' id='my-roster-title'> My Roster </div>
+				<table id="my-roster" class="table-layout">
+				    <thead>
+				    	<th>Position</th>
+				        <th>Name</th>
+				        <th>Projection (pts)</th>
+				    </thead>
+				    <tbody id='my-roster-data'>
+				    </tbody>
+				</table>  
+			</div>
+  		</div>
+
+
+  		<div class='controls'>
+   			<div class='recommendations' id='recommendations'> 
+   				<div class='recommendations-list-title'> Recommendations </div>
+   				<table id="recommendation-list" class="table-layout">
+				    <thead>
+				    	<th>Position</th>
+				        <th>Name</th>
+				        <th>Team</th>
+				        <th>ADP</th>
+				        <th>Pick Grade</th>
+				    </thead>
+				    <tbody id='recommendation-data'>
+				    </tbody>
+				</table>  	
+  			</div>
+    		<div class='info' id='info'> 
+  			</div>
+  		</div>
+  		 <div class='draft-list'>
+  			<div class='draft-list-title'> Draft Board
+  				 <span class='draft-button'> 
+  					<button type="button" id='draft-player' class="btn btn-light">Draft Player</button>
+  				</span>
+  			</div>
+
+  			<div class='players-list'> 
+  				<table id="players" class="table-layout">
+				    <thead>
+				    	<th>Rank</th>
+				        <th>Name</th>
+				        <th>Position</th>
+				        <th>Team</th>
+				        <th>ADP</th>
+				    </thead>
+				    <tbody id='player-data'>
+				    </tbody>
+				</table>
+  			</div>
+  			</div>
+		</div>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="/views/index.js"></script>
+  </body>
+</html>

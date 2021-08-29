@@ -1,0 +1,112 @@
+ :root {
+  --main-background-color: #000033;
+  --main-text-color: #ffffe6;
+  --main-select-color: #f2f2f2;
+  --main-select-text-color: #00264d;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #ddd;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  border: .05rem solid #fff;
+  background-repeat: repeat;
+}
+
+body {
+	background-color: var(--main-background-color);
+}
+.heading {
+	color: var(--main-text-color);
+	text-align: center;
+}
+.big-grid {
+	color: var(--main-text-color);
+	display: grid;
+	grid-template-columns: 25% 35% 40%;
+	font-family: "Verdana";
+	font-size: 12px;
+	text-align:center;
+}
+.controls {
+	display:grid;
+	grid-template-rows: 20% 60% 20%;
+}
+.draft-list{
+	display: grid;
+	grid-template-rows: 10% 80%;
+	margin-top:10%;
+}
+
+.draft-list-title {
+	font-size:32px;
+}
+
+.recommendations-list-title {
+	font-size: 28px;
+	padding-bottom:2%;
+}
+.roster-title {
+	font-size: 20px;
+	padding-bottom:2%;
+}
+
+.recommendations {
+	margin-top:14%;
+}
+
+.table-layout {
+    border: 3px solid white;
+    border-collapse: collapse;
+    margin: 0 auto 0;
+}
+.table-layout tr, .table-layout th {
+    border: 1px solid grey;
+    padding: 5px 5px 0;
+    text-align: center
+}
+.table-layout td {
+    text-align: left;
+}
+.selected {
+    color: var(--main-select-text-color);
+    background-color: var(--main-select-color);
+}
+.players-list {
+	height:75vh;
+	overflow:auto;
+}
+
+.draft-button {
+	padding-top: 10%;
+}
+
+.border {
+	border: 1px solid grey;
+}
+.score {
+	text-align: right
+}
+td {
+	padding:5px;
+}
+
+.team-rosters {
+	display:grid;
+	grid-template-rows: 65%, 35%
+}
+.my-roster {
+	margin-top: 12%;
+	font-size: 8px;
+	color: #c3fdfc;
+	border-color: #13fdfc;
+}

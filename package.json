@@ -1,0 +1,21 @@
+{
+  "name": "fantasy-football-draft-helper",
+  "version": "1.0.0",
+  "description": "Fantasy Football AI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fantasy-football-draft-helper"
+  },
+  "keywords": [
+    "word"
+  ],
+  "author": "rishi-sundaresan",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.0.1"
+  }
+}
