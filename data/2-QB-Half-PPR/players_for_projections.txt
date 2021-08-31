@@ -1,0 +1,1817 @@
+
+PLAYER
+
+Christian McCaffrey
+
+Car
+RB
+
+Dalvin Cook
+Min
+RB
+
+Saquon Barkley
+Q
+
+NYG
+RB
+
+Alvin Kamara
+
+NO
+RB
+
+Derrick Henry
+Ten
+RB
+
+Travis Kelce
+KC
+TE
+
+Davante Adams
+GB
+WR
+
+Ezekiel Elliott
+
+Dal
+RB
+
+Jonathan Taylor
+Ind
+RB
+
+Austin Ekeler
+LAC
+RB
+
+Aaron Jones
+
+GB
+RB
+
+Nick Chubb
+Cle
+RB
+
+Tyreek Hill
+
+KC
+WR
+
+Antonio Gibson
+Wsh
+RB
+
+Najee Harris
+
+Pit
+RB
+
+Stefon Diggs
+Q
+
+Buf
+WR
+
+DeAndre Hopkins
+Q
+Ari
+WR
+
+Calvin Ridley
+Atl
+WR
+
+DK Metcalf
+Sea
+WR
+
+A.J. Brown
+Q
+Ten
+WR
+
+Justin Jefferson
+Q
+Min
+WR
+
+Joe Mixon
+Cin
+RB
+
+Clyde Edwards-Helaire
+Q
+
+KC
+RB
+
+Darren Waller
+LV
+TE
+
+Terry McLaurin
+
+Wsh
+WR
+
+Keenan Allen
+LAC
+WR
+
+Allen Robinson II
+
+Chi
+WR
+
+CeeDee Lamb
+O
+Dal
+WR
+
+George Kittle
+SF
+TE
+
+James Robinson
+
+Jax
+RB
+
+David Montgomery
+Chi
+RB
+
+Miles Sanders
+Phi
+RB
+
+Robert Woods
+LAR
+WR
+
+Mike Evans
+TB
+WR
+
+Amari Cooper
+Dal
+WR
+
+D'Andre Swift
+Q
+
+Det
+RB
+
+J.K. Dobbins
+Q
+
+Bal
+RB
+
+Adam Thielen
+Q
+
+Min
+WR
+
+Chris Godwin
+TB
+WR
+
+Tyler Lockett
+Q
+Sea
+WR
+
+Diontae Johnson
+Pit
+WR
+
+Cooper Kupp
+LAR
+WR
+
+Julio Jones
+Q
+
+Ten
+WR
+
+DJ Moore
+
+Car
+WR
+
+Brandon Aiyuk
+Q
+
+SF
+WR
+
+Tee Higgins
+Cin
+WR
+
+Chris Carson
+Sea
+RB
+
+Josh Jacobs
+LV
+RB
+
+Patrick Mahomes
+
+KC
+QB
+
+Josh Allen
+
+Buf
+QB
+
+
+
+Chase Edmonds
+Ari
+RB
+
+
+Javonte Williams
+Den
+RB
+
+
+Kareem Hunt
+Cle
+RB
+
+
+Myles Gaskin
+Mia
+RB
+
+
+Kenny Golladay
+Q
+
+NYG
+WR
+
+
+Odell Beckham Jr.
+Q
+
+Cle
+WR
+
+
+JuJu Smith-Schuster
+Pit
+WR
+
+
+Robby Anderson
+
+Car
+WR
+
+
+Courtland Sutton
+Q
+
+Den
+WR
+
+
+Mark Andrews
+
+Bal
+TE
+
+
+T.J. Hockenson
+Q
+
+Det
+TE
+
+
+Kyle Pitts
+Atl
+TE
+
+
+Kyler Murray
+
+Ari
+QB
+
+
+Jerry Jeudy
+Den
+WR
+
+
+Chase Claypool
+
+Pit
+WR
+
+
+Ja'Marr Chase
+
+Cin
+WR
+
+
+Dak Prescott
+Q
+
+Dal
+QB
+
+
+Lamar Jackson
+
+Bal
+QB
+
+
+Mike Davis
+Atl
+RB
+
+
+Damien Harris
+
+NE
+RB
+
+
+William Fuller V
+SSPD
+
+Mia
+WR
+
+
+Brandin Cooks
+Hou
+WR
+
+
+Tyler Boyd
+Cin
+WR
+
+
+Laviska Shenault Jr.
+
+Jax
+WR
+
+
+Michael Gallup
+Dal
+WR
+
+
+Logan Thomas
+Wsh
+TE
+
+
+DeVonta Smith
+
+Phi
+WR
+
+
+Deebo Samuel
+SF
+WR
+
+
+Aaron Rodgers
+GB
+QB
+
+
+Russell Wilson
+
+Sea
+QB
+
+
+Justin Herbert
+LAC
+QB
+
+
+Noah Fant
+Q
+
+Den
+TE
+
+
+Michael Thomas
+O
+NO
+WR
+
+
+DJ Chark Jr.
+Q
+Jax
+WR
+
+
+Marvin Jones Jr.
+Q
+
+Jax
+WR
+
+
+Corey Davis
+NYJ
+WR
+
+
+Sony Michel
+
+LAR
+RB
+
+
+Darrell Henderson Jr.
+Q
+
+LAR
+RB
+
+
+Marquise Brown
+Q
+
+Bal
+WR
+
+
+Jarvis Landry
+Cle
+WR
+
+
+Curtis Samuel
+Q
+
+Wsh
+WR
+
+
+Mike Williams
+Q
+
+LAC
+WR
+
+
+Antonio Brown
+TB
+WR
+
+
+Raheem Mostert
+SF
+RB
+
+
+Jaylen Waddle
+Mia
+WR
+
+
+Henry Ruggs III
+LV
+WR
+
+
+Leonard Fournette
+TB
+RB
+
+
+Kenyan Drake
+LV
+RB
+
+
+Zack Moss
+
+Buf
+RB
+
+
+Melvin Gordon III
+Den
+RB
+
+
+
+
+AJ Dillon
+
+GB
+RB
+
+
+James Conner
+Ari
+RB
+
+
+Michael Carter
+
+NYJ
+RB
+
+
+Jamaal Williams
+
+Det
+RB
+
+
+Dallas Goedert
+
+Phi
+TE
+
+
+Robert Tonyan
+GB
+TE
+
+
+Jonnu Smith
+NE
+TE
+
+
+Mike Gesicki
+Mia
+TE
+
+
+Tom Brady
+TB
+QB
+
+
+Ronald Jones II
+TB
+RB
+
+
+Trey Sermon
+
+SF
+RB
+
+
+Nyheim Hines
+Ind
+RB
+
+
+Phillip Lindsay
+Hou
+RB
+
+
+Jalen Hurts
+
+Phi
+QB
+
+
+Ryan Tannehill
+O
+
+Ten
+QB
+
+
+Matthew Stafford
+LAR
+QB
+
+
+Cole Beasley
+
+Buf
+WR
+
+
+Michael Pittman Jr.
+Ind
+WR
+
+
+DeVante Parker
+Q
+
+Mia
+WR
+
+
+Marquez Callaway
+
+NO
+WR
+
+
+Jakobi Meyers
+NE
+WR
+
+
+Jalen Reagor
+
+Phi
+WR
+
+
+Devin Singletary
+
+Buf
+RB
+
+
+David Johnson
+Hou
+RB
+
+
+Tyrell Williams
+Q
+
+Det
+WR
+
+
+Parris Campbell
+Ind
+WR
+
+
+T.Y. Hilton
+Ind
+WR
+
+
+Mecole Hardman
+
+KC
+WR
+
+
+Darnell Mooney
+
+Chi
+WR
+
+
+Irv Smith Jr.
+
+Min
+TE
+
+
+Tyler Higbee
+LAR
+TE
+
+
+Evan Engram
+
+NYG
+TE
+
+
+Joe Burrow
+
+Cin
+QB
+
+
+Tua Tagovailoa
+
+Mia
+QB
+
+
+Trevor Lawrence
+
+Jax
+QB
+
+
+J.D. McKissic
+Wsh
+RB
+
+
+James White
+NE
+RB
+
+
+Gus Edwards
+
+Bal
+RB
+
+
+Malcolm Brown
+Mia
+RB
+
+
+Tony Pollard
+Dal
+RB
+
+
+Alexander Mattison
+Q
+
+Min
+RB
+
+
+Carlos Hyde
+
+Jax
+RB
+
+
+Austin Hooper
+Cle
+TE
+
+
+Hunter Henry
+Q
+
+NE
+TE
+
+
+Rob Gronkowski
+TB
+TE
+
+
+Baker Mayfield
+
+Cle
+QB
+
+
+Justin Fields
+
+Chi
+QB
+
+
+Trey Lance
+
+SF
+QB
+
+
+Matt Ryan
+Atl
+QB
+
+
+Elijah Moore
+
+NYJ
+WR
+
+
+
+
+Nelson Agholor
+
+NE
+WR
+
+
+Russell Gage
+Atl
+WR
+
+
+Jamison Crowder
+NYJ
+WR
+
+Terrace Marshall Jr.
+
+Car
+WR
+
+
+Rondale Moore
+Ari
+WR
+
+
+Giovani Bernard
+TB
+RB
+
+
+Tevin Coleman
+NYJ
+RB
+
+
+Mark Ingram II
+Hou
+RB
+
+
+A.J. Green
+Ari
+WR
+
+
+Bryan Edwards
+LV
+WR
+
+
+Randall Cobb
+GB
+WR
+
+
+Sterling Shepard
+NYG
+WR
+
+
+Gabriel Davis
+
+Buf
+WR
+
+
+Emmanuel Sanders
+
+Buf
+WR
+
+
+Eric Ebron
+Pit
+TE
+
+
+Cole Kmet
+
+Chi
+TE
+
+
+Zach Ertz
+
+Phi
+TE
+
+
+Ben Roethlisberger
+
+Pit
+QB
+
+
+Buccaneers D/ST
+TB
+D/ST
+
+
+Steelers D/ST
+Pit
+D/ST
+
+
+Ravens D/ST
+Bal
+D/ST
+
+
+Washington D/ST
+Wsh
+D/ST
+
+
+49ers D/ST
+SF
+D/ST
+
+
+Bills D/ST
+Buf
+D/ST
+
+
+Broncos D/ST
+Den
+D/ST
+
+
+Patriots D/ST
+NE
+D/ST
+
+
+Rams D/ST
+LAR
+D/ST
+
+
+Browns D/ST
+Cle
+D/ST
+
+
+Colts D/ST
+Ind
+D/ST
+
+
+Vikings D/ST
+Min
+D/ST
+
+
+Harrison Butker
+KC
+K
+
+
+Justin Tucker
+Bal
+K
+
+
+Graham Gano
+NYG
+K
+
+
+Jason Myers
+Sea
+K
+
+
+Brandon McManus
+Den
+K
+
+
+Jason Sanders
+Mia
+K
+
+
+Younghoe Koo
+Atl
+K
+
+
+Matt Gay
+LAR
+K
+
+
+Greg Zuerlein
+Q
+
+Dal
+K
+
+
+Tyler Bass
+Buf
+K
+
+
+Josh Lambo
+Jax
+K
+
+
+Matt Prater
+Ari
+K
+
+Amon-Ra St. Brown
+
+Det
+WR
+
+
+Devontae Booker
+NYG
+RB
+
+
+Darrynton Evans
+Q
+Ten
+RB
+
+
+Latavius Murray
+
+NO
+RB
+
+
+Rhamondre Stevenson
+
+NE
+RB
+
+
+Tarik Cohen
+O
+Chi
+RB
+
+
+Rashaad Penny
+Sea
+RB
+
+
+Qadree Ollison
+Atl
+RB
+
+
+
+Damien Williams
+Chi
+RB
+
+Chuba Hubbard
+
+Car
+RB
+
+
+Darrel Williams
+Q
+
+KC
+RB
+
+
+Ty Johnson
+
+NYJ
+RB
+
+
+Justin Jackson
+Q
+
+LAC
+RB
+
+
+Salvon Ahmed
+Mia
+RB
+
+
+Marlon Mack
+Ind
+RB
+
+
+Boston Scott
+
+Phi
+RB
+
+
+Xavier Jones
+
+LAR
+RB
+
+
+Wayne Gallman II
+SF
+RB
+
+
+Anthony Firkser
+Ten
+TE
+
+
+Daniel Jones
+NYG
+QB
+
+
+Breshad Perriman
+
+Det
+WR
+
+
+Rashod Bateman
+Q
+Bal
+WR
+
+
+Tre'Quan Smith
+Q
+NO
+WR
+
+
+John Brown
+LV
+WR
+
+
+Kadarius Toney
+Q
+
+NYG
+WR
+
+
+Nico Collins
+Q
+Hou
+WR
+
+
+Kirk Cousins
+
+Min
+QB
+
+
+Ryan Fitzpatrick
+
+Wsh
+QB
+
+
+Dolphins D/ST
+Mia
+D/ST
+
+
+Saints D/ST
+NO
+D/ST
+
+
+Daniel Carlson
+LV
+K
+
+
+Nick Folk
+NE
+K
+
+
+Sammy Watkins
+Q
+
+Bal
+WR
+
+
+D'Wayne Eskridge
+
+Sea
+WR
+
+
+Christian Kirk
+
+Ari
+WR
+
+
+Allen Lazard
+GB
+WR
+
+
+Darius Slayton
+NYG
+WR
+
+
+Van Jefferson
+Q
+LAR
+WR
+
+
+KJ Hamler
+Q
+
+Den
+WR
+
+
+Denzel Mims
+Q
+
+NYJ
+WR
+
+
+Demarcus Robinson
+KC
+WR
+
+
+Byron Pringle
+KC
+WR
+
+
+Cordarrelle Patterson
+Atl
+RB
+
+
+Samaje Perine
+Cin
+RB
+
+
+DeeJay Dallas
+Sea
+RB
+
+
+Joshua Kelley
+LAC
+RB
+
+
+Rex Burkhead
+Hou
+RB
+
+
+Brian Hill
+Ten
+RB
+
+
+J.J. Taylor
+
+NE
+RB
+
+
+Kenneth Gainwell
+
+Phi
+RB
+
+
+Jameis Winston
+
+NO
+QB
+
+
+Derek Carr
+
+LV
+QB
+
+
+Zach Wilson
+
+NYJ
+QB
+
+
+Jared Cook
+LAC
+TE
+
+
+Adam Trautman
+Q
+
+NO
+TE
+
+
+Blake Jarwin
+Dal
+TE
+
+
+Gerald Everett
+Sea
+TE
+
+
+Tony Jones Jr.
+
+NO
+RB
+
+
+Quintez Cephus
+
+Det
+WR
+
+Dyami Brown
+Wsh
+WR
+
+Packers D/ST
+GB
+D/ST
+
+Bears D/ST
+Chi
+D/ST
+
+Chase McLaughlin
+
+Cle
+K
+
+Ryan Succop
+O
+
+TB
+K
+
+C.J. Uzomah
+Cin
+TE
+
+O.J. Howard
+TB
+TE
+
+Jordan Akins
+Hou
+TE
+
+Anthony Miller
+Q
+Hou
+WR
+
+Tutu Atwell
+Q
+LAR
+WR
+
+DeSean Jackson
+LAR
+WR
+
+Chris Conley
+Hou
+WR
+
+Kyle Juszczyk
+SF
+RB
+
+Dare Ogunbowale
+Jax
+RB
+
+Jared Goff
+
+Det
+QB
+
+Carson Wentz
+Q
+
+Ind
+QB
+
+Cam Newton
+
+NE
+QB
+
+Sam Darnold
+
+Car
+QB
+
+Drew Lock
+
+Den
+QB
+
+Olamide Zaccheaus
+Atl
+WR
+
+Keelan Cole
+NYJ
+WR
+
+Donovan Peoples-Jones
+Cle
+WR
+
+Tim Patrick
+Den
+WR
+
+James Washington
+
+Pit
+WR
+
+La'Mical Perine
+Q
+
+NYJ
+RB
+
+Benny Snell Jr.
+
+Pit
+RB
+
+Jalen Richard
+Q
+LV
+RB
+
+Jonathan Ward
+Ari
+RB
+
+Chris Evans
+Cin
+RB
+
+Larry Rountree III
+LAC
+RB
+
+Jerick McKinnon
+
+KC
+RB
+
+Jermar Jefferson
+
+Det
+RB
+
+Joshua Palmer
+LAC
+WR
+
+Giants D/ST
+NYG
+D/ST
+
+Cardinals D/ST
+Ari
+D/ST
+
+Robbie Gould
+SF
+K
+
+Dustin Hopkins
+Wsh
+K
+
+Jack Doyle
+Ind
+TE
+
+Hayden Hurst
+Atl
+TE
+
+Dan Arnold
+
+Car
+TE
+
+Dalton Schultz
+Dal
+TE
+
+Dawson Knox
+Buf
+TE
+
+Hunter Renfrow
+LV
+WR
+
+Kendrick Bourne
+NE
+WR
+
+Tyrod Taylor
+Hou
+QB
+
+Jets D/ST
+NYJ
+D/ST
+
+Chiefs D/ST
+KC
+D/ST
+
+Titans D/ST
+Ten
+D/ST
+
+Falcons D/ST
+Atl
+D/ST
+
+
+Taysom Hill
+
+NO
+QB
+
+Mac Jones
+
+NE
+QB
+
+Justice Hill
+Q
+
+Bal
+RB
+
+Jaylen Samuels
+
+Pit
+RB
+
+Anthony McFarland Jr.
+Q
+
+Pit
+RB
+
+Mike Boone
+Q
+Den
+RB
+
+Peyton Barber
+Wsh
+RB
+
+Elijah Mitchell
+
+SF
+RB
+
+D'Ernest Johnson
+Cle
+RB
+
+Jimmy Garoppolo
+
+SF
+QB
+
+Donald Parham Jr.
+Q
+LAC
+TE
+
+Tyler Conklin
+Q
+Min
+TE
+
+Will Dissly
+Sea
+TE
+
+Jimmy Graham
+Chi
+TE
+
+Teddy Bridgewater
+
+Den
+QB
+
+Andy Dalton
+Chi
+QB
+
+Jacob Eason
+
+Ind
+QB
+
+Davis Mills
+Hou
+QB
+
+Marcus Mariota
+Q
+
+LV
+QB
+
+Travis Homer
+
+Sea
+RB
+
+Matt Breida
+
+Buf
+RB
+
+Rodney Smith
+Q
+
+Car
+RB
+
+Kyle Rudolph
+Q
+
+NYG
+TE
+
+Pat Freiermuth
+Pit
+TE
+
+Juwan Johnson
+NO
+TE
+
+Tyler Kroft
+NYJ
+TE
+
+Chris Herndon
+NYJ
+TE
+
+Mo Alie-Cox
+Ind
+TE
+
+Harrison Bryant
+Cle
+TE
+
+Maxx Williams
+Q
+Ari
+TE
+
+Jacob Hollister
+Buf
+TE
+
+David Njoku
+Cle
+TE
+
+James O'Shaughnessy
+Jax
+TE
+
+Kylen Granson
+
+Ind
+TE
+
+Jacoby Brissett
+Mia
+QB
+
+Mitchell Trubisky
+Buf
+QB
+
+Gardner Minshew II
+
+Phi
+QB
+
+Jordan Love
+
+GB
+QB
+
+Taylor Heinicke
+
+Wsh
+QB
+
+Kyle Trask
+TB
+QB
+
+P.J. Walker
+
+Car
+QB
+
+Mason Rudolph
+
+Pit
+QB
+
+Trace McSorley
+Q
+
+Bal
+QB
+
+Joe Flacco
+
+Phi
+QB
+
+Rodrigo Blankenship
+
+Ind
+K
+
+Evan McPherson
+Cin
+K
+
+Randy Bullock
+Det
+K
+
+Joey Slye
+
+Car
+K
+
+Ka'imi Fairbairn
+Q
+
+Hou
+K
+
+Mason Crosby
+GB
+K
+
+
+
