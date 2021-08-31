@@ -1,5 +1,8 @@
 var socket = io();
 var clicked_row = -1
+var num_teams = 10;
+var user_team = 1;
+setUserTeamOptions()
 function highlight_row() {
     var table = document.getElementById('players');
     var cells = table.getElementsByTagName('td');
@@ -20,7 +23,6 @@ function highlight_row() {
             var rowSelected = table.getElementsByTagName('tr')[rowId];
             rowSelected.className += " selected";
             clicked_row = rowId
-            console.log(clicked_row)
         }
     }
     cells[0].click()
@@ -128,3 +130,37 @@ document.getElementById('draft-player').addEventListener("click", function() {
         button.disabled = false
     }, 800)//ms
 })
+
+document.getElementById('undo').addEventListener("click", function() {
+    socket.emit('undo')
+    console.log("UNDO")
+})
+
+function setUserTeamOptions() {
+    document.getElementById("user-team-select").innerHTML = ""
+    for (var i = 1; i <= num_teams; i++) {
+        if (user_team == i) {
+            document.getElementById("user-team-select").innerHTML += `<option class="select" value="${i}" selected>${i}</option>`
+        } else {
+            document.getElementById("user-team-select").innerHTML += `<option class="select" value="${i}">${i}</option>`
+        }
+    }
+}
+
+document.getElementById('mode-select').addEventListener('change', (event) => {
+  socket.emit('set-mode', event.target.value)
+});
+document.getElementById('teams-select').addEventListener('change', (event) => {
+  socket.emit('set-num-teams', parseInt(event.target.value))
+  num_teams = parseInt(event.target.value)
+  setUserTeamOptions()
+});
+document.getElementById('bench-select').addEventListener('change', (event) => {
+  socket.emit('set-num-bench', parseInt(event.target.value))
+});
+document.getElementById('user-team-select').addEventListener('change', (event) => {
+  socket.emit('set-user-team', parseInt(event.target.value))
+  user_team = parseInt(event.target.value)
+});
+
+

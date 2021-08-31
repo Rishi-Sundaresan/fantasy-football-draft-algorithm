@@ -26,17 +26,46 @@ server.listen(process.env.PORT || 5000, function() {
 
 var players_sampled_for_tier_difference = 5;
 
-var modes = {'2-QB-Half-PPR': ['QB', 'QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"], 'PPR': [['QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"]]}
+var modes = {'2-QB-Half-PPR': ['QB', 'QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"], 'PPR': ['QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"]}
 
 var all_drafts = {}
 
+var state_history = {}
+
 io.on('connection', function(socket) {
-	var id = Math.random().toString(36).slice(2)
-	var draft = new Draft(id, socket, '2-QB-Half-PPR', 7, 10, 1);
-	all_drafts[id] = draft
-	draft.emit_draft_state()
+	var id_ = Math.random().toString(36).slice(2);
+	while (id_ in all_drafts) {
+		id_ = Math.random().toString(36).slice(2);
+	}
+	var draft_ = new Draft(id_, socket, '2-QB-Half-PPR', 7, 10, 1);
+	all_drafts[id_] = draft_
+	draft_.emit_draft_state()
+
 	socket.on('draft-player', function(index) {
-		draft.pickPlayerAndIncrementDraft(index)
+		draft_.pickPlayerAndIncrementDraft(index)
+	});
+
+	socket.on('set-mode', function(mode) {
+		draft_.setMode(mode);
+	});
+
+	socket.on('set-num-teams', function(num_teams) {
+		draft_.setNumTeams(num_teams);
+	});
+
+	socket.on('set-num-bench', function(num_bench) {
+		draft_.setNumBench(num_bench);
+	});
+
+	socket.on('set-user-team', function(user_team) {
+		draft_.setUserTeam(user_team);
+	});
+
+	socket.on('undo', function() {
+		if (state_history[id_].length > 0) {
+			draft_.setDraftToPreviousState();
+		}
+		
 	});
 });
 
@@ -51,17 +80,19 @@ class Draft {
 		this.num_teams = num_teams
 		this.user_team_pick = user_team_pick
 		this.data = {}
-		this.rosters = Array(this.num_teams+1).fill([])
+
+		this.setUpDraft()
+	}
+	setUpDraft() {
 		this.current_team = 1
 		this.current_pick = 1
-		this.runDraft()
-	}
-	runDraft() {
+		this.rosters = Array(this.num_teams+1).fill([])
 		this.data = JSON.parse(fs.readFileSync('data/' + this.mode + "/data.json"));
 		let projections = JSON.parse(fs.readFileSync('data/' + this.mode + "/projections.json"));
-		this.roster_template = modes[this.mode]
-		for (let i = 0; i < this.num_bench-3; i++)
+		this.roster_template = modes[this.mode].slice()
+		for (let i = 0; i < this.num_bench-3; i++) {
 			this.roster_template.push("Bench")
+		}
 
 		this.num_rounds = this.roster_template.length
 		for (var i = 1; i <= this.num_teams; i++) {
@@ -79,6 +110,12 @@ class Draft {
 			if (player.name == 'JK Dobbins') {
 				players_to_delete.push(player)
 			} 
+			if (player.name == 'Deshaun Watson') {
+				players_to_delete.push(player)
+			} 
+			if (player.name == 'Wil Lutz') {
+				players_to_delete.push(player)
+			} 
 
 			if (player.name in projections) {
 				player.projection = projections[player.name]
@@ -94,7 +131,10 @@ class Draft {
 				players_to_delete.push(player)
 			}
 		}
-
+		// console.log(players_to_delete.length)
+		// for (var i = 0; i < players_to_delete.length; i++) {
+		// 	console.log(players_to_delete[i].name)
+		// }
 		for (var i = 0; i < players_to_delete.length; i++) {
 			this.deletePlayerFromDraft(players_to_delete[i])
 		}
@@ -111,10 +151,33 @@ class Draft {
 				pick = this.getNextPick(pick)
 			}
 		}
+		state_history[this.id] = [this.getStateCopy()]
 
-		let draft_state = {"data": this.data, "draft_order": this.draft_order, "roster_template": this.roster_template, "rosters": this.rosters, "user_team": this.user_team_pick}
-		console.log(this.rosters[0])
-		console.log(this.rosters[0].length)
+		this.emit_draft_state()
+
+	}
+
+	getStateCopy() {
+		return {"data": JSON.parse(JSON.stringify(this.data)), "draft_order": this.draft_order, 
+				"roster_template": this.roster_template, "rosters": JSON.parse(JSON.stringify({"temp": this.rosters})).temp, 
+				"current_pick": this.current_pick, "current_team": this.current_team}
+	}
+
+	setMode(mode) {
+		this.mode = mode
+		this.setUpDraft()
+	}
+	setNumTeams(num_teams) {
+		this.num_teams = num_teams
+		this.setUpDraft()
+	}
+	setNumBench(num_bench) {
+		this.num_bench = num_bench
+		this.setUpDraft()
+	}
+	setUserTeam(user_team) {
+		this.user_team_pick = user_team
+		this.setUpDraft()
 	}
 
 	getAvgTierAndProjectionFromNextPick(position, next_pick) {
@@ -221,14 +284,16 @@ class Draft {
 
 
 	pickPlayer(player, rostered_players, roster_index) {
-		console.log("rostering plaayer")
 		rostered_players[roster_index] = player
 		this.deletePlayerFromDraft(player)
 	}
 
 	deletePlayerFromDraft(player) {
 		delete this.data.by_name[player.name]
-		delete this.data.tiers[player.POS][player.tier][player.name]
+		if ("tier" in player) {
+			delete this.data.tiers[player.POS][player.tier][player.name]
+		}
+
 		for (let i = 0; i < this.data.adp_rank.length; i++) {
 			if (this.data.adp_rank[i].name == player.name) {
 				this.data.adp_rank.splice(i, 1)
@@ -339,13 +404,13 @@ class Draft {
 	}
 
 	pickPlayerAndIncrementDraft(index) {
-		console.log('pickPlayerAndIncrementDraft')
+		state_history[this.id].push(this.getStateCopy())
 		let player = this.data.adp_rank[index]
 		 // Find most restrictive position that matches player.
 		for (var i = 0; i < this.roster_template.length; i++) {
 			let position = this.roster_template[i]
 			if (this.matches_position(player, position) && !this.rosters[this.current_team][i]) {
-				console.log("Player Picked: " + player.name)
+				console.log(`Draft ${this.id} ==> Player Picked: ${player.name}` )
 				this.pickPlayer(this.data.adp_rank[index], this.rosters[this.current_team], i)
 				this.incrementDraft()
 				return
@@ -354,6 +419,16 @@ class Draft {
 		this.socket.emit(`No Available Spots for player ${player.name}`)
 	}
 
+	setDraftToPreviousState() {
+		let last_state = state_history[this.id].pop()
+		this.data = last_state.data
+		this.draft_order = last_state.draft_order
+		this.rosters = last_state.rosters
+		this.roster_template = last_state.roster_template
+		this.current_pick = last_state.current_pick
+		this.current_team = last_state.current_team
+		this.emit_draft_state()
+	}
 
 	emit_draft_state() {
 		this.socket.emit("player-list", this.data.adp_rank)

@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict
 
-mode = "2-QB-Half-PPR"
+mode = "PPR"
 players = []
 with open(mode +'/adp.csv', 'r') as f:
     players = [{k: v for k, v in row.items()}
@@ -17,6 +17,8 @@ for player in players:
 		player['INJ'] = False
 
 players_by_name = {}
+
+print(len(players))
 
 for player in players:
 	players_by_name[player['name']] = player

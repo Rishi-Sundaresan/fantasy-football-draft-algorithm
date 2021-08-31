@@ -17,8 +17,11 @@
     <link href="views/style.css" rel="stylesheet">
   </head>
   <body>
-
-  	<div class='heading'> <h1> Fantasy Football Draft Helper</h1> </div>
+  	<div class='top'>
+  		<div class='_'> </div>
+  		<div class='heading'> <h1> Fantasy Football Draft Helper</h1> </div>
+  		<div class='undo'> <br> <button type="button" id='undo' class="btn btn-light">Undo</button></div>
+  	</div>
   	<div class='big-grid'>
   		<div class='team-rosters'> 
   			<div class='current-pick-roster'>
@@ -49,6 +52,44 @@
 
 
   		<div class='controls'>
+  			<div class="settings">
+				League Type <select class="form-select" id="mode-select" aria-label="League Type">
+				  <option class="select" value="2-QB-Half-PPR">2-QB-Half-PPR</option>
+				  <option class="select" value="PPR">PPR</option>
+				</select><br><br>
+	  			Number of Teams in League <select class="form-select" id="teams-select" aria-label="Teams">
+				  <option class="select" value="2">2</option>
+				  <option class="select" value="3">3</option>
+				  <option class="select" value="4">4</option>
+				  <option class="select" value="5">5</option>
+				  <option class="select" value="6">6</option>
+				  <option class="select" value="7">7</option>
+				  <option class="select" value="8">8</option>
+				  <option class="select" value="9">9</option>
+				  <option class="select" value="10" selected>10</option>
+				  <option class="select" value="11">11</option>
+				  <option class="select" value="12">12</option>
+				  <option class="select" value="13">13</option>
+				  <option class="select" value="14">14</option>
+				  <option class="select" value="15">15</option>
+				  <option class="select" value="16">16</option>
+				  <option class="select" value="17">17</option>
+				  <option class="select" value="18">18</option>
+				  <option class="select" value="19">19</option>
+				  <option class="select" value="20">20</option>
+				</select> <br><br>
+				Number of Players on Bench <select class="form-select" id="bench-select" aria-label="Bench">
+				  <option class="select" value="4">4</option>
+				  <option class="select" value="5">5</option>
+				  <option class="select" value="6" selected>6</option>
+				  <option class="select" value="7">7</option>
+				  <option class="select" value="8">8</option>
+				  <option class="select" value="9">9</option>
+				  <option class="select" value="10">10</option>
+				</select> <br><br>
+				User Team First Round Pick <select class="form-select" id="user-team-select" aria-label="user">
+				</select>
+			</div>
    			<div class='recommendations' id='recommendations'> 
    				<div class='recommendations-list-title'> Recommendations </div>
    				<table id="recommendation-list" class="table-layout">

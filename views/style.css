@@ -110,3 +110,15 @@ td {
 	color: #c3fdfc;
 	border-color: #13fdfc;
 }
+.controls {
+	display: grid;
+	grid-template-rows: 15% 65%;
+	margin-top:15%;
+}
+.top {
+	display: grid;
+	grid-template-columns: 25% 50% 25%;
+}
+.undo {
+	text-align: center;
+}

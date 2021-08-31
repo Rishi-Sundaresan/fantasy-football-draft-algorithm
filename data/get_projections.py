@@ -1,4 +1,6 @@
-with open('players_for_projections.txt', 'r') as f:
+mode = "PPR"
+
+with open(mode + '/players_for_projections.txt', 'r') as f:
 	rows = f.read().splitlines();
 
 projections = {}
@@ -9,17 +11,17 @@ for row in rows:
 			print(row.replace(".", ""))
 		players.append(row.replace(".", ""))
 
-with open('projections.txt', 'r') as f:
+with open(mode + '/projections.txt', 'r') as f:
 	projs = f.read().splitlines();
 
 for i in range(len(projs)):
 	projections[players[i]] = float(projs[i])
 
-print(projections['Jamison Crowder'] == 129.3)
+print(projections['Jamison Crowder'] == 161.7)
 print(projections['Matt Prater'] == 131.4)
-print(projections['Javonte Williams'] == 159.1)
-print(projections['Justice Hill'] == 26.1)
+print(projections['Javonte Williams'] == 173.8)
+print(projections['Darius Slayton'] == 93.2)
 
 import json
-with open('projections.json', 'w') as f:
+with open(mode + '/projections.json', 'w') as f:
     json.dump(projections, f)
