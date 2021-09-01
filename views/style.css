@@ -132,7 +132,8 @@ td {
 }
 .grade-breakdown {
 	font-size: 10px;
-	overflow:auto;	
+	overflow:auto;
+	padding-top: 1%;	
 }
 .info {
 	text-align: left;
