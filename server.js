@@ -444,8 +444,10 @@ class Draft {
 
 	emit_draft_state() {
 		this.socket.emit("player-list", this.data.adp_rank)
-		let [player, options] = this.makeBestSelection(this.current_pick, this.rosters[this.current_team], this.current_team, false);
-		this.socket.emit('best-choice', {"player": player, "options": options})
+		if (this.current_pick == this.draft_order.length - 1) {
+			let [player, options] = this.makeBestSelection(this.current_pick, this.rosters[this.current_team], this.current_team, false);
+			this.socket.emit('best-choice', {"player": player, "options": options})
+		}
 		this.socket.emit('roster', {"team_number": this.current_team, "roster": this.rosters[this.current_team], "roster_positions": this.roster_template})
 		this.socket.emit('my-roster', {"team_number": this.user_team_pick, "roster": this.rosters[this.user_team_pick], "roster_positions": this.roster_template})
 	}
