@@ -400,8 +400,8 @@ class Draft {
 
 	incrementDraft() {
 		if (this.current_pick == this.draft_order.length - 1) {
-			console.log("DRAFT DONE")
-			return
+			this.emit_draft_state()
+			return;
 		}
 		this.current_pick += 1
 		this.current_team = this.draft_order[this.current_pick]
