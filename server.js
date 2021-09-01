@@ -400,7 +400,7 @@ class Draft {
 
 	incrementDraft() {
 		if (this.current_pick == this.draft_order.length - 1) {
-			this.emit_draft_state()
+			this.emit_draft_state(true)
 			return;
 		}
 		this.current_pick += 1
@@ -442,9 +442,9 @@ class Draft {
 		this.locked = false
 	}
 
-	emit_draft_state() {
+	emit_draft_state(end=false) {
 		this.socket.emit("player-list", this.data.adp_rank)
-		if (this.current_pick == this.draft_order.length - 1) {
+		if (!end) {
 			let [player, options] = this.makeBestSelection(this.current_pick, this.rosters[this.current_team], this.current_team, false);
 			this.socket.emit('best-choice', {"player": player, "options": options})
 		}
