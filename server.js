@@ -340,7 +340,7 @@ class Draft {
 
 
 	positionInOptions(position, options) {
-		for (var i = 0; pick < options.length; i++) {
+		for (var i = 0; i < options.length; i++) {
 			if (options[i].position == position) {
 				return true
 			}
@@ -349,7 +349,7 @@ class Draft {
 	}
 
 	GetFirstOptionByPositionInOptions(position, options) {
-		for (var i = 0; pick < options.length; i++) {
+		for (var i = 0; i < options.length; i++) {
 			if (options[i].position == position) {
 				return options[i]
 			}
