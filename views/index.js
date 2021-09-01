@@ -86,6 +86,7 @@ socket.on('best-choice', function(best_choice) {
 });
 
 socket.on('roster', function(roster_info) {
+    document.getElementById('recommendations-title').innerHTML = `Recommendations for Team ${roster_info.team_number}`
     document.getElementById('roster-title').innerHTML = `Team ${roster_info.team_number} Roster`;
 
     document.getElementById('roster-data').innerHTML = "";
