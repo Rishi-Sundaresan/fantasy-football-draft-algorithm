@@ -3,6 +3,7 @@
   --main-text-color: #ffffe6;
   --main-select-color: #f2f2f2;
   --main-select-text-color: #00264d;
+  --main-option-select-color: #fef294;
 }
 
 /* Links */
@@ -37,10 +38,6 @@ body {
 	font-size: 12px;
 	text-align:center;
 }
-.controls {
-	display:grid;
-	grid-template-rows: 20% 60% 20%;
-}
 .draft-list{
 	display: grid;
 	grid-template-rows: 10% 80%;
@@ -61,7 +58,7 @@ body {
 }
 
 .recommendations {
-	margin-top:14%;
+	margin-top:8%;
 }
 
 .table-layout {
@@ -112,8 +109,8 @@ td {
 }
 .controls {
 	display: grid;
-	grid-template-rows: 15% 65%;
-	margin-top:15%;
+	grid-template-rows: 15% 44% 26% 15%;
+	margin-top:8%;
 }
 .top {
 	display: grid;
@@ -121,4 +118,60 @@ td {
 }
 .undo {
 	text-align: center;
+}
+
+.option-selected {
+	color: var(--main-select-text-color);
+    background-color: var(--main-option-select-color);
+}
+
+.option-title {
+	font-size: 13px;
+	font-weight: bold;
+}
+.grade-breakdown {
+	font-size: 10px;
+	overflow:auto;	
+}
+.info {
+	text-align: left;
+}
+.next-round {
+	margin-top:5px;
+	font-size: 12px;
+}
+.option-breakdown {
+	padding: 2%;
+	border: 2px solid var(--main-option-select-color);
+	display:grid;
+	grid-template-rows: 10% 90%;
+	margin-left: 10%;
+	margin-right:10%;
+	margin-top: 10%;
+}
+.next-options {
+	height:50%;
+	overflow:auto;	
+}
+.imp {
+	font-weight: bold;
+	color: var(--main-option-select-color);
+}
+.message {
+	text-align: left;
+	margin-left: 10%;
+	margin-right:10%;
+	margin-top: 2%;
+	font-size: 8px;
+}
+footer {
+  margin: auto;
+  position: fixed;
+  left:80%;
+  bottom:2%;
+  text-align: right;
+  color: var(--main-option-select-color);
+}
+.underline {
+	text-decoration:underline;
 }

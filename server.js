@@ -32,6 +32,8 @@ var all_drafts = {}
 
 var state_history = {}
 
+var locks = {};
+
 io.on('connection', function(socket) {
 	var id_ = Math.random().toString(36).slice(2);
 	while (id_ in all_drafts) {
@@ -84,6 +86,9 @@ class Draft {
 		this.setUpDraft()
 	}
 	setUpDraft() {
+		locks[this.id] = false
+		this.locked = locks[this.id]
+
 		this.current_team = 1
 		this.current_pick = 1
 		this.rosters = Array(this.num_teams+1).fill([])
@@ -404,6 +409,8 @@ class Draft {
 	}
 
 	pickPlayerAndIncrementDraft(index) {
+		if (this.locked) {return;}
+		this.locked = true
 		state_history[this.id].push(this.getStateCopy())
 		let player = this.data.adp_rank[index]
 		 // Find most restrictive position that matches player.
@@ -413,13 +420,17 @@ class Draft {
 				console.log(`Draft ${this.id} ==> Player Picked: ${player.name}` )
 				this.pickPlayer(this.data.adp_rank[index], this.rosters[this.current_team], i)
 				this.incrementDraft()
+				this.locked = false
 				return
 			}
 		}
 		this.socket.emit(`No Available Spots for player ${player.name}`)
+		this.locked = false
 	}
 
 	setDraftToPreviousState() {
+		if (this.locked) {return;}
+		this.locked = true
 		let last_state = state_history[this.id].pop()
 		this.data = last_state.data
 		this.draft_order = last_state.draft_order
@@ -428,6 +439,7 @@ class Draft {
 		this.current_pick = last_state.current_pick
 		this.current_team = last_state.current_team
 		this.emit_draft_state()
+		this.locked = false
 	}
 
 	emit_draft_state() {

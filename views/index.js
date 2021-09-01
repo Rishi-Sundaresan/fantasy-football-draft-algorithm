@@ -1,10 +1,13 @@
 var socket = io();
 var clicked_row = -1
+var clicked_option = -1
 var num_teams = 10;
 var user_team = 1;
+var latest_best_choice = {}
+var latest_player_list = []
 setUserTeamOptions()
-function highlight_row() {
-    var table = document.getElementById('players');
+function highlight_row(table_name) {
+    var table = document.getElementById(table_name);
     var cells = table.getElementsByTagName('td');
 
     for (var i = 0; i < cells.length; i++) {
@@ -18,21 +21,36 @@ function highlight_row() {
             var rowsNotSelected = table.getElementsByTagName('tr');
             for (var row = 0; row < rowsNotSelected.length; row++) {
                 rowsNotSelected[row].style.backgroundColor = "";
-                rowsNotSelected[row].classList.remove('selected');
+                table_name == "players" ? rowsNotSelected[row].classList.remove('selected') : rowsNotSelected[row].classList.remove('option-selected');
             }
             var rowSelected = table.getElementsByTagName('tr')[rowId];
-            rowSelected.className += " selected";
-            clicked_row = rowId
+            if (table_name == "players") {
+                clicked_row = rowId
+                rowSelected.className += " selected"
+            } else if (table_name == "recommendations") {
+                clicked_option = rowId
+                rowSelected.className += " option-selected"
+                displayOptionBreakdown()
+                //match player list with option
+                let player_cells = document.getElementById('players').getElementsByTagName('td')
+                for (var i = 0; i < player_cells.length; i++) {
+                    if (player_cells[i].innerHTML == latest_best_choice.options[clicked_option-1].player.name) {
+                        player_cells[i].click()
+                        break;
+                    }
+                }
+            }
+            
         }
     }
     cells[0].click()
-
 }
 
 
 
 socket.on('player-list', function(player_list) {
     document.getElementById('player-data').innerHTML = "";
+    latest_player_list = player_list
     for (var i = 0; i < player_list.length; i++) {
         let player = player_list[i]
         document.getElementById('player-data').innerHTML += 
@@ -44,7 +62,7 @@ socket.on('player-list', function(player_list) {
                             <td>${player.ADP}</td>\
         </tr>`
      }
-    highlight_row()
+    highlight_row('players')
 });
 
 
@@ -63,6 +81,8 @@ socket.on('best-choice', function(best_choice) {
                             <td class='score'> ${score}</td>\
         </tr>`
      }
+     latest_best_choice = best_choice
+     highlight_row('recommendations')
 });
 
 socket.on('roster', function(roster_info) {
@@ -146,6 +166,44 @@ function setUserTeamOptions() {
         }
     }
 }
+
+
+function displayOptionBreakdown() {
+    let option = latest_best_choice.options[clicked_option-1]
+
+    document.getElementById('option-title').innerHTML = `Grade Breakdown for ${option.player.name}`
+    var html = `<div class='info'> ${option.player.name} is a <span class="imp">tier ${option.player.tier} ${option.player.POS} </span>, projected for <span class="imp"> ${option.player.projection} points </span>. If you wait until the next round(s) to pick a ${option.position}, your pick will\
+    be probably at least about ${option.next_pick_tier_diff.toFixed(1)} tiers lower, with a corresponding drop of ${option.next_pick_projection_diff.toFixed(1)} projected points </div>`;
+    document.getElementById('grade-breakdown').innerHTML = html;
+
+
+
+    document.getElementById('grade-breakdown').innerHTML += `<div class="next-round">Probable Next Round Options</div> <div class="next-options"><table id=option-table class="table-layout small">
+                    <thead>
+                        <th>Name</th>
+                        <th>Team</th>
+                        <th>Tier</th>
+                        <th>Projection</th>
+                        <th>ADP</th>
+                    </thead>
+                    <tbody id='option-table-data'>
+                    </tbody>
+                </table></div>`
+
+    for (var i = 0; i < option.next_pick_options.length; i++) {
+        let player = option.next_pick_options[i]
+        document.getElementById('option-table-data').innerHTML += 
+        `<tr>\
+                            <td>${player.name}</td>\
+                            <td>${player.TEAM}</td>\
+                            <td>${player.tier}</td>\
+                            <td>${player.projection}</td>\
+                            <td>${player.ADP}</td>\
+        </tr>`
+    }
+
+}
+
 
 document.getElementById('mode-select').addEventListener('change', (event) => {
   socket.emit('set-mode', event.target.value)

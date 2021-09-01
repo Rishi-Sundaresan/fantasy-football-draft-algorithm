@@ -19,7 +19,7 @@
   <body>
   	<div class='top'>
   		<div class='_'> </div>
-  		<div class='heading'> <h1> Fantasy Football Draft Helper</h1> </div>
+  		<div class='heading'> <h1> Fantasy Football Snake Draft Helper</h1> </div>
   		<div class='undo'> <br> <button type="button" id='undo' class="btn btn-light">Undo</button></div>
   	</div>
   	<div class='big-grid'>
@@ -92,7 +92,7 @@
 			</div>
    			<div class='recommendations' id='recommendations'> 
    				<div class='recommendations-list-title'> Recommendations </div>
-   				<table id="recommendation-list" class="table-layout">
+   				<table id="recommendations" class="table-layout">
 				    <thead>
 				    	<th>Position</th>
 				        <th>Name</th>
@@ -104,8 +104,12 @@
 				    </tbody>
 				</table>  	
   			</div>
-    		<div class='info' id='info'> 
+    		<div class='option-breakdown' id='option-breakdown'> 
+    			<div class='option-title' id='option-title'></div>
+    			<div class='grade-breakdown' id='grade-breakdown'></div>
   			</div>
+  			<div class='message'>
+  			The grade for a pick is based on how much value you can get at the same position by waiting until the next round to pick at that position. The higher the difference in value between this round and next, the better and more valuable the pick. Mid-draft team roster needs also taken into account. </div>
   		</div>
   		 <div class='draft-list'>
   			<div class='draft-list-title'> Draft Board
@@ -136,4 +140,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="/views/index.js"></script>
   </body>
+   <footer class='footer'> 
+    Created by <a class='footer-link imp underline' href="https://www.linkedin.com/in/rishi-sundaresan-0a6012112/">Rishi Sundaresan</a>
+  </footer>
 </html>
