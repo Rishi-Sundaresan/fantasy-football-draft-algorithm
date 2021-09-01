@@ -411,13 +411,13 @@ class Draft {
 	pickPlayerAndIncrementDraft(index) {
 		if (this.locked) {return;}
 		this.locked = true
-		state_history[this.id].push(this.getStateCopy())
 		let player = this.data.adp_rank[index]
 		 // Find most restrictive position that matches player.
 		for (var i = 0; i < this.roster_template.length; i++) {
 			let position = this.roster_template[i]
 			if (this.matches_position(player, position) && !this.rosters[this.current_team][i]) {
 				console.log(`Draft ${this.id} ==> Player Picked: ${player.name}` )
+				state_history[this.id].push(this.getStateCopy())
 				this.pickPlayer(this.data.adp_rank[index], this.rosters[this.current_team], i)
 				this.incrementDraft()
 				this.locked = false
