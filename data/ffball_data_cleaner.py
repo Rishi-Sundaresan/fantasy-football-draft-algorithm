@@ -11,6 +11,8 @@ for player in players:
 	player['ADP'] = float(player['ADP'])
 	if mode ==  "2-Flex-PPR" and player['POS'] == 'QB':
 		player['ADP'] += 10.0
+	if mode ==  "2-Flex-PPR" and player['POS'] == 'TE':
+		player['ADP'] += 5.0
 	player['RK'] = int(player['RK'])
 	player['name'] = player['name'].replace(".", "")
 	if "xca" in player['name']:
