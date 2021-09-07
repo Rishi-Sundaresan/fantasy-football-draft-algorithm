@@ -26,7 +26,9 @@ server.listen(process.env.PORT || 5000, function() {
 
 var players_sampled_for_tier_difference = 5;
 
-var modes = {'2-QB-Half-PPR': ['QB', 'QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"], 'PPR': ['QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"]}
+var modes = {'2-QB-Half-PPR': ['QB', 'QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"], 
+			'PPR': ['QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"],
+			'2-Flex-PPR': ['QB', 'RB', 'RB', 'WR', 'WR', 'TE', 'FLEX', 'FLEX', 'DST', 'K', "Bench-RB", "Bench-WR", "Bench-QB"]}
 
 var all_drafts = {}
 
@@ -320,7 +322,7 @@ class Draft {
 		let k = 0.25
 		let adp_weight = 0.65
 		let bench_weight = 0.65
-		let flex_weight = 0.9
+		let flex_weight = this.mode == '2-FLEX-PPR' ? 0.999 : 0.9
 		//make sure score between 0 and 1.
 		let proj_diff_score = (option.next_pick_projection_diff - (-25.0))/100.0
 		proj_diff_score = Math.max(Math.min(proj_diff_score, 1), 0)

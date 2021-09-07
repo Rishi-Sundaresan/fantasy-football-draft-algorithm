@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict
 
-mode = "PPR"
+mode = "2-Flex-PPR"
 players = []
 with open(mode +'/adp.csv', 'r') as f:
     players = [{k: v for k, v in row.items()}
@@ -9,12 +9,16 @@ with open(mode +'/adp.csv', 'r') as f:
 
 for player in players:
 	player['ADP'] = float(player['ADP'])
+	if mode ==  "2-Flex-PPR" and player['POS'] == 'QB':
+		player['ADP'] += 10.0
 	player['RK'] = int(player['RK'])
 	player['name'] = player['name'].replace(".", "")
 	if "xca" in player['name']:
 		player['INJ'] = True
 	else:
 		player['INJ'] = False
+
+players = sorted(players, key=lambda p : p['ADP'])
 
 players_by_name = {}
 
